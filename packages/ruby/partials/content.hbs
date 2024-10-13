@@ -1,13 +1,4 @@
 <header class="gh-article-header gh-canvas">
-    <div class="gh-article-meta">
-        {{#is "home"}}
-            <span class="gh-article-label">Latest issue</span>
-        {{/is}}
-        <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-    </div>
-
-    <h1 class="gh-article-title">{{title}}</h1>
-
     {{#if custom_excerpt}}
         <p class="gh-article-excerpt">{{custom_excerpt}}</p>
     {{/if}}
