@@ -1,9 +1,11 @@
 {{!< default}}
 
 <main id="gh-main" class="gh-main">
-    {{#foreach posts limit="1"}}
+    {{#foreach posts}}
+        {{#has number="1"}}
         <article class="gh-article {{post_class}}">
             {{> content}}
         </article>
+        {{/has}}
     {{/foreach}}
 </main>
