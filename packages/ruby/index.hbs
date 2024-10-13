@@ -1,24 +1,24 @@
 {{!< default}}
 
 <main class="site-main">
-    {{#get "posts" limit=100 order="published_at asc"}}
-         {{#foreach posts limit="1"}}
-            {{#post}}
+    {{#post}}
+        {{#get "posts" limit=100 order="published_at asc"}}
+             {{#foreach posts limit="1"}}
 
-            <article class="gh-article {{post_class}}">
-                <div class="gh-content gh-canvas">
-                    {{content}}
-                </div>
+                <article class="gh-article {{post_class}}">
+                    <div class="gh-content gh-canvas">
+                        {{content}}
+                    </div>
 
-            </article>
+                </article>
 
-            {{#if comments}}
-                <div class="gh-comments gh-canvas">
-                    {{comments}}
-                </div>
-            {{/if}}
-            {{/post}}
-         {{/foreach}}
-    {{/get}}
+                {{#if comments}}
+                    <div class="gh-comments gh-canvas">
+                        {{comments}}
+                    </div>
+                {{/if}}
+             {{/foreach}}
+        {{/get}}
+    {{/post}}
 </main>
 
